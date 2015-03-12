@@ -1,0 +1,16 @@
+[
+{
+  "modid": "MCScript",
+  "name": "MCScript",
+  "description": "Scripting Minecraft with languages other than Java",
+  "version": "0.0.1a",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["trajing", "Strikingwolf"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
