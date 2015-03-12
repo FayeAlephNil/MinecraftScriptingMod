@@ -12,18 +12,18 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
-        compile 'net.mikera:clojure-utils:0.6.1'
+        classpath 'org.clojure:clojure:1.5.0-alpha3'
     }
 }
 
 apply plugin: 'forge'
 
 version = "1.7.10-1.0"
-group= "mods.letsmodreboot" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "LetsModReboot"
+group= "mods.mcscript" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "MCScript"
 
 minecraft {
-    version = "1.7.10-10.13.0.1180"
+    version = "1.7.10-10.13.2.1291"
     assetDir = "eclipse/assets"
 }
 
@@ -40,7 +40,7 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
+	compile "org.clojure:clojure:1.5.0-alpha3"
 }
 
 processResources
