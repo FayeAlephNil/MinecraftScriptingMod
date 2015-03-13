@@ -13,6 +13,8 @@ public class LangEvent {
 
 	public void addHandler(String language, LangHandler langHandler) {langHandlers.put(language, langHandler);}
 
+	public void getHandler(String language) {langHandlers.get(language);}
+
 	@SubscribeEvent
 	public void onEvent(Event e) {
 		for (LangHandler langHandler : langHandlers.values()) {

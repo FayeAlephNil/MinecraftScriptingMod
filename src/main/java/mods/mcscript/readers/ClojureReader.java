@@ -13,7 +13,6 @@ import java.util.ArrayList;
  * @author Strikingwolf
  */
 public class ClojureReader implements IReader {
-
 	@Override
 	public void readFiles() {
 		File[] files = Filter.finder("./scripts", ".clj");
