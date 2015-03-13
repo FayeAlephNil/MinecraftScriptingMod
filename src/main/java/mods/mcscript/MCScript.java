@@ -5,6 +5,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
 import mods.mcscript.handler.ClojureHandler;
 import mods.mcscript.handler.LangEvent;
 import mods.mcscript.proxy.CommonProxy;
@@ -13,6 +14,7 @@ import mods.mcscript.readers.IReader;
 import mods.mcscript.reference.Reference;
 import mods.mcscript.utility.LogHelper;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.AttackEntityEvent;
 
 import java.util.ArrayList;
 
@@ -25,7 +27,7 @@ public class MCScript
 	static {
 		readers.add(new ClojureReader());
 
-		langEvent.addHandler(new ClojureHandler());
+		langEvent.addHandler("clojure", new ClojureHandler());
 	}
 
     @Mod.Instance(Reference.MOD_ID)
