@@ -21,8 +21,10 @@ public abstract class LangHandler {
 	}
 
 	public void callEvent(Event e) {
-		for (Object o : toCall.get(e.toString())) {
-			onEvent(e, o);
+		if (toCall.get(e.toString()) != null) {
+			for (Object o : toCall.get(e.toString())) {
+				onEvent(e, o);
+			}
 		}
 	}
 }

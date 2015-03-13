@@ -16,7 +16,7 @@ import net.minecraftforge.common.MinecraftForge;
 
 import java.util.ArrayList;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class MCScript
 {
 	public static ArrayList<IReader> readers = new ArrayList<IReader>();
