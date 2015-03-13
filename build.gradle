@@ -13,6 +13,7 @@ buildscript {
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
         classpath 'org.clojure:clojure:1.7.0-alpha5'
+		classpath 'org.jruby:jruby-complete:1.7.19'
 	}
 }
 
@@ -41,6 +42,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 	compile 'org.clojure:clojure:1.7.0-alpha5'
+	compile 'org.jruby:jruby-complete:1.7.19'
 }
 
 processResources
