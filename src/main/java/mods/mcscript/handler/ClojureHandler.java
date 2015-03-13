@@ -7,7 +7,6 @@ import cpw.mods.fml.common.eventhandler.Event;
  * @author Strikingwolf
  */
 public class ClojureHandler extends LangHandler {
-
 	@Override
 	protected void onEvent(Event e, Object block) {
 		if (block instanceof IFn) {
