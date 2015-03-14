@@ -4,6 +4,7 @@ import mods.mcscript.handler.ClojureHandler;
 import mods.mcscript.handler.LangEvent;
 import mods.mcscript.readers.ClojureReader;
 import mods.mcscript.readers.IReader;
+import org.jruby.Ruby;
 
 import java.util.ArrayList;
 
@@ -23,4 +24,6 @@ public class Reference {
 
 		langEvent.addHandler("clojure", new ClojureHandler());
 	}
+
+	public static final Ruby ruby = Ruby.newInstance();
 }
