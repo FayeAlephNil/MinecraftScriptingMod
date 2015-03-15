@@ -30,4 +30,5 @@ public class Reference {
 	}
 
 	public static final Ruby ruby = Ruby.newInstance();
+    public static final String SCRIPT_DIR = "mcsm-scripts";
 }

@@ -1,5 +1,6 @@
 package mods.mcscript.readers;
 
+import mods.mcscript.reference.Reference;
 import mods.mcscript.utility.Clojure;
 
 /**
@@ -8,7 +9,7 @@ import mods.mcscript.utility.Clojure;
 public class ClojureReader extends Reader {
 	@Override
 	public void readFiles() {
-		for (String toEval : filesToStrings("./scripts")) {
+		for (String toEval : filesToStrings(Reference.SCRIPT_DIR)) {
 			Clojure.eval(toEval);
 		}
 	}
