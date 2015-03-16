@@ -18,6 +18,5 @@ public class Filter {
 			public boolean accept(File dir, String filename)
 			{ return filename.endsWith(endsWith); }
 		} );
-
 	}
 }
