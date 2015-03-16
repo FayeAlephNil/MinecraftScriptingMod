@@ -12,7 +12,9 @@ public class ClojureReader extends Reader {
 	 */
 	@Override
 	public void readFiles() {
-		filesToStrings(Reference.SCRIPT_DIR).forEach(Clojure::eval);
+		for (String toEval : filesToStrings(Reference.SCRIPT_DIR)) {
+			Clojure.eval(toEval);
+		}
 	}
 
 	/**

@@ -35,7 +35,10 @@ public class MCScript
             dir.mkdir();
             System.out.println("Script Directory Made");
         }
-		Reference.readers.forEach(Reader::readFiles);
+
+		for (Reader reader : Reference.readers) {
+			reader.readFiles();
+		}
 
         proxy.registerKeyBindings();
         proxy.initRenderers();
