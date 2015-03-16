@@ -6,6 +6,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import mods.mcscript.proxy.CommonProxy;
+import mods.mcscript.readers.Reader;
 import mods.mcscript.reference.Reference;
 import mods.mcscript.utility.LogHelper;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,7 +35,7 @@ public class MCScript
             dir.mkdir();
             System.out.println("Script Directory Made");
         }
-		Reference.readers.forEach(mods.mcscript.readers.Reader::readFiles);
+		Reference.readers.forEach(Reader::readFiles);
 
         proxy.registerKeyBindings();
         proxy.initRenderers();
