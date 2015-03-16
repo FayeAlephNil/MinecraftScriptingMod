@@ -169,4 +169,10 @@ gradle-app.setting
 !gradle-wrapper.jar
 
 ## Minecraft ##
-eclipse/
+eclipse/config
+eclipse/crash-reports
+eclipse/logs
+eclipse/mods
+eclipse/resourcepacks
+eclipse/saves
+eclipse/options.txt

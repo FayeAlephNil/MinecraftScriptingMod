@@ -1,0 +1,1 @@
+puts "[TESTSCRIPT-JRuby] Hello World"

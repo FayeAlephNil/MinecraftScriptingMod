@@ -1,0 +1,1 @@
+(println "[TESTSCRIPT-Clojure] Hello World")
