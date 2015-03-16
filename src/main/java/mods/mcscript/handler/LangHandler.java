@@ -38,17 +38,15 @@ public abstract class LangHandler {
 	 */
 	public void callEvent(Event e) {
 		//Loop through all keys
-		for (String key : toCall.keySet()) {
+		toCall.keySet().forEach(key -> {
 			LogHelper.info("Handling " + e.toString() + "with key " + key);
 			//If the key is contained in the event name then
 			if (e.toString().contains(key)) {
 				//Call onEvent with the event name and using all the blocks
 				LogHelper.info("Running " + key	+ " event");
-				for (Object o : toCall.get(key)) {
-					onEvent(e, o);
-				}
+				toCall.get(key).forEach(o -> onEvent(e, o));
 				LogHelper.info(key + "isCanceled = " + e.isCanceled());
 			}
-		}
+		});
 	}
 }
