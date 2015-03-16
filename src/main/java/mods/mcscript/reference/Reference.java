@@ -11,16 +11,20 @@ import org.jruby.Ruby;
 import java.util.ArrayList;
 
 public class Reference {
+
+	//References
     public static final String MOD_ID = "MCScript";
     public static final String MOD_NAME = "MCScript";
     public static final String VERSION = "1.7.10-1.0";
     public static final String CLIENT_PROXY_CLASS = "mods.mcscript.proxy.ClientProxy";
     public static final String SERVER_PROXY_CLASS = "mods.mcscript.proxy.ServerProxy";
-    public static final String GUI_FACTORY_CLASS = "mods.mcscript.client.gui.GuiFactory";
 
+
+	//Setup the list of readers and a LangEvent instance
 	public static ArrayList<Reader> readers = new ArrayList<Reader>();
 	public static LangEvent langEvent = new LangEvent();
 
+	//Add to the list of readers and the langEvent instance
 	static {
 		readers.add(new ClojureReader());
 		readers.add(new RubyReader());
@@ -29,5 +33,6 @@ public class Reference {
 		langEvent.addHandler("jruby", new RubyHandler());
 	}
 
+	//Get an instance of Ruby from JRuby
 	public static final Ruby ruby = Ruby.newInstance();
 }

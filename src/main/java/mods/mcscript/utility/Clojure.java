@@ -4,6 +4,7 @@ import clojure.lang.RT;
 import clojure.lang.Symbol;
 import clojure.lang.Var;
 
+//Utility class for executing clojure code
 public class Clojure {
 	public static final Var REQUIRE=var("clojure.core", "require");
 	public static final Var META=var("clojure.core", "meta");
