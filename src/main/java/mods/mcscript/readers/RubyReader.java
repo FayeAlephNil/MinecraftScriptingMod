@@ -11,9 +11,7 @@ public class RubyReader extends Reader {
 	 */
     @Override
     public void readFiles() {
-        for (String toEval : filesToStrings(Reference.SCRIPT_DIR)) {
-            Reference.ruby.evalScriptlet(toEval);
-        }
+		filesToStrings(Reference.SCRIPT_DIR).forEach(Reference.ruby::evalScriptlet);
     }
 
 	/**
