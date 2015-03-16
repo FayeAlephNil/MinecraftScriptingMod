@@ -9,20 +9,17 @@ public class RubyReader extends Reader {
 	/**
 	 * Executes ruby files in scripts
 	 */
-	@Override
-	public void readFiles() {
-		//Loop through files and eval them
-		for (String toEval : filesToStrings("./scripts")) {
-			Reference.ruby.evalScriptlet(toEval);
-		}
-	}
+    @Override
+    public void readFiles() {
+        for (String toEval : filesToStrings(Reference.SCRIPT_DIR)) {
+            Reference.ruby.evalScriptlet(toEval);
+        }
+    }
 
 	/**
 	 * returns ".rb"
 	 * @return extension
 	 */
-	@Override
-	protected String getExtension() {
-		return ".rb";
-	}
+    @Override
+    protected String getExtension() { return ".rb"; }
 }

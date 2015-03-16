@@ -11,6 +11,10 @@ import mods.mcscript.reference.Reference;
 import mods.mcscript.utility.LogHelper;
 import net.minecraftforge.common.MinecraftForge;
 
+import java.io.File;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class MCScript
 {
@@ -25,13 +29,17 @@ public class MCScript
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-		//Reads all the files
-		for (Reader reader : Reference.readers) {reader.readFiles();}
+        if (Files.notExists(FileSystems.getDefault().getPath(Reference.SCRIPT_DIR)))
+        {
+            File dir = new File(Reference.SCRIPT_DIR);
+            dir.mkdir();
+            System.out.println("Script Directory Made");
+        }
+		for (Reader reader : Reference.readers) { reader.readFiles(); }
 
         proxy.registerKeyBindings();
         proxy.initRenderers();
         proxy.initSounds();
-
         LogHelper.info("Pre Initialization Complete");
     }
 

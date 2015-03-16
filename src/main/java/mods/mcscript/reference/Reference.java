@@ -35,4 +35,5 @@ public class Reference {
 
 	//Get an instance of Ruby from JRuby
 	public static final Ruby ruby = Ruby.newInstance();
+    public static final String SCRIPT_DIR = "mcsm-scripts";
 }
