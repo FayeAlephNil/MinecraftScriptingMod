@@ -36,4 +36,10 @@ public class Reference {
 	//Get an instance of Ruby from JRuby
 	public static final Ruby ruby = Ruby.newInstance();
     public static final String SCRIPT_DIR = "mcsm-scripts";
+    public static final String RUBY_LIB = "module MCSM\n"+
+            "def test\n" +
+            "puts 'testing'\n" +
+            "end\n" +
+            "end\n";
+    public static final String CLOJURE_LIB = "";
 }
