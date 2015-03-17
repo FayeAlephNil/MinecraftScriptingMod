@@ -27,7 +27,7 @@ public abstract class Reader {
 	 */
 	protected ArrayList<String> filesToStrings(String path) {
 		//Get the files within path and with the extension
-		File[] files = Filter.finder(path, getExtension());
+		ArrayList<File> files = Filter.finder(path, getExtension());
 		ArrayList<String> strings = new ArrayList<String>();
 
 		//Loop through files unless files is null
