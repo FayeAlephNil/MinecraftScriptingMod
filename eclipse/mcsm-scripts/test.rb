@@ -1,1 +1,0 @@
-puts "[TEST-RUBY] Hello World"
